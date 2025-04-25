@@ -18,7 +18,7 @@ const App = () => {
     setLoading(true); // Set loading to true before starting the fetch
     try {
       // Fetch data from the API
-      const response = await fetch('https://course-api.com/react-tours-project');
+      const response = await fetch('https://www.course-api.com/react-tours-project');
       if (!response.ok) {
         // Throw an error if the response is not successful
         throw new Error('Failed to fetch tours');
@@ -39,6 +39,11 @@ const App = () => {
   useEffect(() => {
     fetchTours(); // Call the fetch function
   }, []); // Empty dependency array ensures this runs only once when the component mounts
+
+  // Function to remove a tour by its id
+  const removeTour = (id) => {
+    setTours((prevTours) => prevTours.filter((tour) => tour.id !== id));
+  };
 
   // Render a loading message while data is being fetched
   if (loading) {
@@ -62,9 +67,9 @@ const App = () => {
 
   // Render the Gallery component with the fetched tours data
   return (
-    <div>
+    <div> 
       <h1>Tours</h1>
-      <Gallery tours={tours} /> {/* Pass the tours data to the Gallery component */}
+      <Gallery tours={tours} onRemoveTour={removeTour} /> {/* Pass the tours data to the Gallery component */}
     </div>
   );
 };
