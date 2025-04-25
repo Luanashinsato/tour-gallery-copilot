@@ -1,0 +1,117 @@
+/* General body styling */
+body {
+  background-color: #f9f9f9; /* Light background */
+  color: #333; /* Dark text color */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header styling */
+h1, h2, h4 {
+  color: #ff7f50; /* Coral highlights for headings */
+  text-align: center;
+}
+
+/* Gallery container */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Tour card styling */
+.tour-card {
+  background-color: #ffffff; /* White background for cards */
+  border: 1px solid #ff7f50; /* Coral border */
+  border-radius: 8px;
+  padding: 16px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex; /* Enable flexbox */
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  text-align: center; /* Center text inside the card */
+}
+
+.tour-card:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Tour image styling */
+.tour-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+/* Tour details styling */
+.tour-details h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.tour-details h4 {
+  font-size: 1.2rem;
+  margin: 8px 0;
+  color: #ff7f50; /* Coral price highlight */
+}
+
+.tour-details p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #555; /* Softer text color for descriptions */
+  margin-bottom: 16px; /* Add spacing below the description */
+}
+
+/* Button styling */
+.not-interested-button {
+  background-color: #ff7f50; /* Coral button background */
+  color: #ffffff; /* White text color for contrast */
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.not-interested-button:hover {
+  background-color: #e5673f; /* Darker coral on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.not-interested-button:active {
+  transform: translateY(0); /* Reset lift on click */
+}
+
+button {
+  background-color: #ff7f50; /* Coral button background */
+  color: #ffffff; /* White text color for contrast */
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #e5673f; /* Darker coral on hover */
+  transform: translateY(-2px); /* Slight lift on hover */
+}
+
+button:active {
+  transform: translateY(0); /* Reset lift on click */
+}
+
+/* Centered message styling */
+div > h2 {
+  text-align: center;
+  margin-top: 20px;
+  color: #333; /* Dark text color */
+}

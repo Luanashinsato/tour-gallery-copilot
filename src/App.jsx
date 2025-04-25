@@ -4,6 +4,7 @@
 
 import React, { useState, useEffect } from 'react'; // Importing React and hooks
 import Gallery from './components/Gallery'; // Importing the Gallery component
+import './styles/styles.css'; // Importing the CSS file for styling
 
 const App = () => {
   // State to store the list of tours
