@@ -2,6 +2,7 @@
 // Copilot prompt: Fetch tours from https://course-api.com/react-tours-project using useEffect and store in state: tours, loading, error
 
 import React, { useState, useEffect } from 'react'; // Importing React and hooks
+import Gallery from './components/Gallery'; // Importing the Gallery component
 
 const App = () => {
   // State to store the list of tours
@@ -37,6 +38,8 @@ const App = () => {
     fetchTours(); // Call the fetch function
   }, []); // Empty dependency array ensures this runs only once when the component mounts
 
+  // Task 4: Conditional Rendering
+  // Copilot prompt: If loading is true, display "Loading...". If error, display an error message. Else, render Gallery with tour data
   // Render a loading message while data is being fetched
   if (loading) {
     return <h2>Loading...</h2>;
@@ -47,15 +50,11 @@ const App = () => {
     return <h2>Error: {error}</h2>;
   }
 
-  // Render the list of tours once the data is successfully fetched
+  // Render the Gallery component with the fetched tours data
   return (
     <div>
       <h1>Tours</h1>
-      <ul>
-        {tours.map((tour) => (
-          <li key={tour.id}>{tour.name}</li> // Display each tour's name
-        ))}
-      </ul>
+      <Gallery tours={tours} /> {/* Pass the tours data to the Gallery component */}
     </div>
   );
 };
